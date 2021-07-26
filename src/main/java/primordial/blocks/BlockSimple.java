@@ -1,6 +1,5 @@
-package primordial;
+package primordial.blocks;
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -12,8 +11,7 @@ public class BlockSimple extends Block
         super(Block.Properties.of(Material.STONE));
     }
 
-    @Override
-    public BlockRenderType getRenderType(BlockState block_state) {
+    public BlockRenderType getRenderType(BlockState blockState) {
         return BlockRenderType.MODEL;
     }
 }
