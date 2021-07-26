@@ -1,4 +1,4 @@
-package primordial;
+package primordial.startup;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -6,6 +6,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import primordial.Primordial;
+import primordial.blocks.BlockSimple;
 
 public class StartupCommon {
 
@@ -14,7 +16,7 @@ public class StartupCommon {
 
     @SubscribeEvent
     public static void onBlocksRegistration(final RegistryEvent.Register<Block> blockRegisterEvent){
-        simple_block = (BlockSimple) new BlockSimple().setRegistryName(primordial.MODID, "simple_block_RegistryName");
+        simple_block = (BlockSimple) new BlockSimple().setRegistryName(Primordial.MODID, "simple_block_RegistryName");
         blockRegisterEvent.getRegistry().register(simple_block);
     }
 
