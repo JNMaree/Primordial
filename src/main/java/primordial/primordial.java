@@ -5,6 +5,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.item.BlockItem;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.scoreboard.ScoreCriteria;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+
 
 import net.minecraftforge.fml.common.Mod;
 
@@ -23,15 +35,3 @@ public class primordial
 
 }
 
-public class BlockSimple extends Block
-{
-    public BlockSimple()
-    {
-        super(Block.Properties.create(Material.STONE));
-    }
-
-    @java.lang.Override
-    public BlockRenderType getRenderType(BlockState b_state) {
-        return BlockRenderType.MODEL;
-    }
-}
