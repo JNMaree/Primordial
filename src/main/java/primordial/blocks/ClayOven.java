@@ -2,7 +2,6 @@ package primordial.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 
 public class BlockSimple extends Block
