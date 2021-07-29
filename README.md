@@ -1,2 +1,7 @@
 ![Primordial](src/main/resources/primordial_logo.png)
-A Minecraft mod for redefining early-game progression to first principles.
+
+# Rethinking progression to first principles
+
+A Minecraft mod for redefining vanilla progression to be more realistic.
+
+
