@@ -25,6 +25,6 @@ public class CrudePickaxe extends Item{
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flags){
-        list.add(new TranslationTextComponent("message.CrudePickaxe"));
+        list.add(new TranslationTextComponent("message.crude_pickaxe"));
     }
 }

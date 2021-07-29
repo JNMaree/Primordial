@@ -1,2 +1,2 @@
 # Primordial
-A Minecraft mod for redefining progression to first principles.
+A Minecraft mod for redefining early-game progression to first principles.

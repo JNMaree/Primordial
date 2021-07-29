@@ -114,6 +114,7 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    //Just Enough Items
     maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
@@ -123,6 +124,15 @@ repositories {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
+    }
+    //CraftTweaker
+    maven {
+        url = "http://maven.blamejared.com"
+    }
+    //The One Probe
+    maven {
+        name = "tterrag maven"
+        url = "http://maven.tterag.com/"
     }
 }
 
@@ -136,11 +146,17 @@ dependencies {
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
 
-    //JustEnoughItems Dependency
+    //JustEnoughItems dependency
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.2:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.2")
+
+    //CraftTweaker dependency
+    runtimeOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-1.16.5:7.1.0.359")
+
+    //The One Probe dependency
+    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
