@@ -1,6 +1,7 @@
 package primordial.blocks;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -12,14 +13,15 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
+import primordial.startup.Config;
 import primordial.startup.Registration;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 
-public class ClayOvenTileEntity extends TileEntity implements ITickableTileEntity {
-
+public class ClayOvenTileEntity extends TileEntity implements ITickableTileEntity
+{
     public ClayOvenTileEntity(){
         super(Registration.BLOCK_OVEN_TILE.get());
     }
@@ -59,7 +61,22 @@ public class ClayOvenTileEntity extends TileEntity implements ITickableTileEntit
 
         if (process_counter > 0){
             process_counter--;
+            setChanged();
         }
+
+        if (process_counter <= 0) {
+            ItemStack stack = itemHandler.getStackInSlot(0);
+            itemHandler.extractItem(0, 1, false);
+            itemHandler.setStackInSlot(0, ItemStack.of(Items.DIAMOND.getDefaultInstance().serializeNBT()));
+            process_counter = Config.CLAY_OVEN_TICKS.get();
+            setChanged();
+        }
+    }
+
+    @Override
+    public void setRemoved() {
+        super.setRemoved();
+        handler.invalidate();
     }
 
     @Override
@@ -72,7 +89,7 @@ public class ClayOvenTileEntity extends TileEntity implements ITickableTileEntit
     @Override
     public CompoundNBT save(CompoundNBT tag) {
         tag.put("inv", itemHandler.serializeNBT());
-        tag.put("counter", process_counter);
+        tag.putInt("counter", process_counter);
         return super.save(tag);
     }
 

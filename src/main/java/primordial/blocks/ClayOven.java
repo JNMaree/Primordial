@@ -66,6 +66,7 @@ public class ClayOven extends Block
             TileEntity te = world.getBlockEntity(pos);
             if (te instanceof ClayOvenTileEntity) {
                 INamedContainerProvider containerProvider = new INamedContainerProvider() {
+
                     @Override
                     public ITextComponent getDisplayName() {
                         return new TranslationTextComponent("screen.primordial.clay_oven");
@@ -76,8 +77,12 @@ public class ClayOven extends Block
                     public Container createMenu(int i, PlayerInventory pinv, PlayerEntity pentity) {
                         return new ClayOvenContainer(i, world, pos, pinv, pentity);
                     }
-                }
+                };
+            } else {
+                throw new IllegalStateException("Named Container Provider is missing!");
             }
         }
+        return ActionResultType.SUCCESS;
     }
+
 }
