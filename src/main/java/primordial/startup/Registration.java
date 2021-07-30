@@ -18,8 +18,8 @@ import static primordial.Primordial.MODID;
 import primordial.blocks.*;
 import primordial.items.CrudePickaxe;
 
-public class Registration {
-
+public class Registration
+{
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     private static final DeferredRegister<TileEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, MODID);
     private static final DeferredRegister<ContainerType<?>> CONTAINERS = DeferredRegister.create(ForgeRegistries.CONTAINERS, MODID);

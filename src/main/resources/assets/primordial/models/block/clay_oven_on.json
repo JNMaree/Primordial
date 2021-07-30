@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "primordial:block/clay_oven",
+    "up":  "primordial:block/clay_oven",
+    "north": "primordial:block/clay_oven_front_lit",
+    "south": "primordial:block/clay_oven_back_lit",
+    "east": "primordial:block/clay_oven",
+    "west": "primordial:block/clay_oven"
+  }
+}

@@ -10,14 +10,15 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import primordial.Primordial;
+import primordial.blocks.ClayOvenScreen;
 
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = Primordial.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class StartupClient {
-
+public class Client
+{
     public static void init(final FMLClientSetupEvent event){
-        ScreenManager.register(Registration.);
+        ScreenManager.register(Registration.BLOCK_OVEN_CONTAINER.get(), ClayOvenScreen::new);
     }
 
     @SubscribeEvent
