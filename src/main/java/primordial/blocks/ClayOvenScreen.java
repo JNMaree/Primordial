@@ -33,4 +33,8 @@ public class ClayOvenScreen extends ContainerScreen<ClayOvenContainer>
         super.render(mstack, mouseX, mouseY, partialTicks);
     }
 
+    @Override
+    protected void renderLabels(MatrixStack mstack, int mouseX, int mouseY) {
+        drawString(mstack, Minecraft.getInstance().font, "Progress: " + menu.getItems(), 10, 10, 0xffffff);
+    }
 }

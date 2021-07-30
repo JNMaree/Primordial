@@ -14,8 +14,10 @@ public class Items extends ItemModelProvider
 
     @Override
     protected void registerModels() {
-        singleTexture(Registration.CRUDE_PICKAXE.get().getRegistryName().getPath(), new ResourceLocation("item/handheld"),
+        ResourceLocation texHandheld = new ResourceLocation("item/handheld");
+        singleTexture(Registration.CRUDE_PICKAXE.get().getRegistryName().getPath(), texHandheld,
                 "layer0", new ResourceLocation(Primordial.MODID, "item/crude_pickaxe"));
-        withExistingParent(Registration.BLOCK_OVEN_ITEM.get().getRegistryName().getPath(), new ResourceLocation(Primordial.MODID, "block/clay_oven"));
+        withExistingParent(Registration.BLOCK_OVEN_ITEM.get().getRegistryName().getPath(),
+                new ResourceLocation(Primordial.MODID, "block/clay_oven"));
     }
 }

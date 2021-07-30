@@ -3,7 +3,6 @@ package primordial.startup;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.config.ModConfig;
-import org.lwjgl.system.CallbackI;
 
 public class Config {
 

@@ -1,0 +1,50 @@
+{
+  "variants":{
+    "facing=down,powered=false": {
+      "model": "primordial:block/clay_oven",
+      "x": 90
+    },
+    "facing=up,powered=false": {
+      "model": "primordial:block/clay_oven",
+      "x": -90
+    },
+    "facing=north,powered=false": {
+      "model": "primordial:block/clay_oven"
+    },
+    "facing=south,powered=false": {
+      "model": "primordial:block/clay_oven",
+      "y": 180
+    },
+    "facing=west,powered=false": {
+      "model": "primordial:block/clay_oven",
+      "y": 270
+    },
+    "facing=east,powered=false": {
+      "model": "primordial:block/clay_oven",
+      "y": 90
+    },
+    "facing=down,powered=true": {
+      "model": "primordial:block/clay_oven_on",
+      "x": 90
+    },
+    "facing=up,powered=true": {
+      "model": "primordial:block/clay_oven_on",
+      "x": -90
+    },
+    "facing=north,powered=true": {
+      "model": "primordial:block/clay_oven_on"
+    },
+    "facing=south,powered=true": {
+      "model": "primordial:block/clay_oven_on",
+      "y": 180
+    },
+    "facing=west,powered=true": {
+      "model": "primordial:block/clay_oven_on",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "primordial:block/clay_oven_on",
+      "y": 90
+    }
+  }
+}
