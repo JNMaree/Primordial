@@ -1,8 +1,6 @@
 package primordial.startup;
 
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderTooltipEvent;
@@ -12,7 +10,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import primordial.Primordial;
 import primordial.blocks.ClayOvenScreen;
 
-import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = Primordial.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Client
@@ -22,9 +19,9 @@ public class Client
     }
 
     @SubscribeEvent
-    public static void onTooltipPre(RenderTooltipEvent.Pre event){
+    public void onTooltipPre(RenderTooltipEvent.Pre event){
         Item item = event.getStack().getItem();
-        if (Objects.requireNonNull(item.getRegistryName()).getNamespace().equals(Primordial.MODID)) {
+        if (item.getRegistryName().getNamespace().equals(Primordial.MODID)) {
             event.setMaxWidth(200);
         }
     }

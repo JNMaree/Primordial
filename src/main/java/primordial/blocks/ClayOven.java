@@ -57,7 +57,7 @@ public class ClayOven extends Block
 
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(BlockStateProperties.FACING, BlockStateProperties.LIT);
+        builder.add(BlockStateProperties.FACING, BlockStateProperties.POWERED);
     }
 
     @Override

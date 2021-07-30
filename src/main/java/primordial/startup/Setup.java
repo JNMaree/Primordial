@@ -16,7 +16,7 @@ public class Setup {
     public static final ItemGroup ITEM_GROUP = new ItemGroup("primordial") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Registration.SIMPLEBLOCK.get());
+            return new ItemStack(Registration.BLOCK_OVEN.get());
         }
     };
 

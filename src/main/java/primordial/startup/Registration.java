@@ -27,13 +27,14 @@ public class Registration
 
     public static void init(){
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
     }
 
     //BLOCK: Clay Oven globals
-    public static final RegistryObject<ClayOven> BLOCK_OVEN = BLOCKS.register("simple_block", ClayOven::new);
-    public static final RegistryObject<Item> BLOCK_OVEN_ITEM = ITEMS.register("simple_block", () -> new BlockItem(BLOCK_OVEN.get(), new Item.Properties().tab(Setup.ITEM_GROUP)));
+    public static final RegistryObject<ClayOven> BLOCK_OVEN = BLOCKS.register("clay_oven", ClayOven::new);
+    public static final RegistryObject<Item> BLOCK_OVEN_ITEM = ITEMS.register("clay_oven", () -> new BlockItem(BLOCK_OVEN.get(), new Item.Properties().tab(Setup.ITEM_GROUP)));
     public static final RegistryObject<TileEntityType<ClayOvenTileEntity>> BLOCK_OVEN_TILE = TILES.register("clay_oven", () -> TileEntityType.Builder.of(ClayOvenTileEntity::new, BLOCK_OVEN.get()).build(null));
     public static final RegistryObject<ContainerType<ClayOvenContainer>> BLOCK_OVEN_CONTAINER = CONTAINERS.register("clay_oven", () -> IForgeContainerType.create((windowId, inv, data) -> {
         BlockPos pos = data.readBlockPos();

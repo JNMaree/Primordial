@@ -132,7 +132,7 @@ repositories {
     //The One Probe
     maven {
         name = "tterrag maven"
-        url = "https://maven.tterag.com/"
+        url = "https://maven.tterrag.com/"
     }
 }
 
