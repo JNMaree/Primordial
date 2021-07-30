@@ -17,7 +17,7 @@ import java.util.Objects;
 public class StartupClient {
 
     public static void init(final FMLClientSetupEvent event){
-        ScreenManager.register(Registration.);
+
     }
 
     @SubscribeEvent

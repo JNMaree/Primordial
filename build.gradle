@@ -127,12 +127,12 @@ repositories {
     }
     //CraftTweaker
     maven {
-        url = "http://maven.blamejared.com"
+        url = "https://maven.blamejared.com"
     }
     //The One Probe
     maven {
         name = "tterrag maven"
-        url = "http://maven.tterag.com/"
+        url = "https://maven.tterag.com/"
     }
 }
 
