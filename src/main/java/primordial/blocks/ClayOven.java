@@ -27,7 +27,7 @@ import java.util.List;
 public class ClayOven extends Block
 {
     public ClayOven() {
-        super(AbstractBlock.Properties.of(Material.STONE)
+        super(Properties.of(Material.STONE)
                 .strength(1.0f)
                 .sound(SoundType.NETHER_BRICKS)
                 .lightLevel(state -> state.getValue(BlockStateProperties.POWERED) ? 10 : 0));

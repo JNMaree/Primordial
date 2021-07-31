@@ -12,13 +12,14 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.1'
+version = '0.1'
 group = 'primordial.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'primordial'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
     // Channel:   Version:
@@ -156,7 +157,7 @@ dependencies {
     runtimeOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-1.16.5:7.1.0.359")
 
     //The One Probe dependency
-    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
+    //compile fg.deobf(project.dependencies.create("mcjty.theoneprobe:TheOneProbe-${top_version}") {transitive = false})
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
@@ -183,7 +184,7 @@ jar {
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"w&m",
+            "Implementation-Vendor" : "w&m",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

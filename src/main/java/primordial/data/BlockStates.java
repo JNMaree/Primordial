@@ -1,4 +1,4 @@
-package primordial.startup;
+package primordial.data;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,6 +12,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import primordial.Primordial;
+import primordial.startup.Registration;
 
 import java.util.function.Function;
 
