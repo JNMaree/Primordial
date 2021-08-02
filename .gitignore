@@ -29,6 +29,8 @@ hs_err_pid*
 /.gradle
 /build
 /run
+/generated
+/src/generated
 
 # In Progress Files
 *.kra

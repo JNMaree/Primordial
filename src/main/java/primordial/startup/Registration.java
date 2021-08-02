@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -36,10 +35,11 @@ public class Registration
     public static final RegistryObject<ClayOven> BLOCK_OVEN = BLOCKS.register("clay_oven", ClayOven::new);
     public static final RegistryObject<Item> BLOCK_OVEN_ITEM = ITEMS.register("clay_oven", () -> new BlockItem(BLOCK_OVEN.get(), new Item.Properties().tab(Setup.ITEM_GROUP)));
     public static final RegistryObject<TileEntityType<ClayOvenTileEntity>> BLOCK_OVEN_TILE = TILES.register("clay_oven", () -> TileEntityType.Builder.of(ClayOvenTileEntity::new, BLOCK_OVEN.get()).build(null));
-    public static final RegistryObject<ContainerType<ClayOvenContainer>> BLOCK_OVEN_CONTAINER = CONTAINERS.register("clay_oven", () -> IForgeContainerType.create((windowId, inv, data) -> {
-        BlockPos pos = data.readBlockPos();
-        World world = inv.player.getCommandSenderWorld();
-        return new ClayOvenContainer(windowId, world, pos, inv, inv.player);
+    public static final RegistryObject<ContainerType<ClayOvenContainer>> BLOCK_OVEN_CONTAINER = CONTAINERS.register("clay_oven",
+            () -> IForgeContainerType.create((windowId, inv, data) -> {
+                    BlockPos pos = data.readBlockPos();
+                    World world = inv.player.getCommandSenderWorld();
+                    return new ClayOvenContainer(windowId, world, pos, inv, inv.player);
     }));
 
     public static final RegistryObject<CrudePickaxe> CRUDE_PICKAXE = ITEMS.register("crude_pickaxe", CrudePickaxe::new);

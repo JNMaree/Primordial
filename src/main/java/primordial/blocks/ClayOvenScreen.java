@@ -29,8 +29,8 @@ public class ClayOvenScreen extends ContainerScreen<ClayOvenContainer>
     @Override
     public void render(MatrixStack mstack, int mouseX, int mouseY, float partialTicks) {
         this.renderBackground(mstack);
-        this.renderTooltip(mstack, mouseX, mouseY);
         super.render(mstack, mouseX, mouseY, partialTicks);
+        this.renderTooltip(mstack, mouseX, mouseY);
     }
 
     @Override
