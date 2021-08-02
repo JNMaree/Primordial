@@ -13,6 +13,7 @@ public class DataGen
         DataGenerator dataGen = event.getGenerator();
         if (event.includeServer()) {
             dataGen.addProvider(new LootTables(dataGen));
+            dataGen.addProvider(new Recipes(dataGen));
         }
         if (event.includeClient()) {
             dataGen.addProvider(new BlockStates(dataGen, event.getExistingFileHelper()));
