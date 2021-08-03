@@ -19,6 +19,13 @@ public class Items extends ItemModelProvider
         //Handheld Items
         singleTexture(Registration.CRUDE_PICKAXE.get().getRegistryName().getPath(), texHandheld,
                 "layer0", new ResourceLocation(Primordial.MODID, "item/crude_pickaxe"));
+        singleTexture(Registration.CRUDE_AXE.get().getRegistryName().getPath(), texHandheld,
+                "layer0", new ResourceLocation(Primordial.MODID, "item/crude_axe"));
+        singleTexture(Registration.CRUDE_SHOVEL.get().getRegistryName().getPath(), texHandheld,
+                "layer0", new ResourceLocation(Primordial.MODID, "item/crude_shovel"));
+        singleTexture(Registration.CRUDE_HOE.get().getRegistryName().getPath(), texHandheld,
+                "layer0", new ResourceLocation(Primordial.MODID, "item/crude_hoe"));
+
         //Block Items
         withExistingParent(Registration.BLOCK_OVEN_ITEM.get().getRegistryName().getPath(),
                 new ResourceLocation(Primordial.MODID, "block/clay_oven"));

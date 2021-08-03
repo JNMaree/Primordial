@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"xxx",
+		"s#s",
+		" # "
+	],
+	"key": {
+		"x": {
+			"item": "minecraft:flint"
+		},
+		"#": {
+			"item": "minecraft:stick"
+		},
+		"s": {
+			"item": "minecraft:string"
+		}
+	},
+	"result": {
+		"item": "primordial:crude_pickaxe"
+	}
+}

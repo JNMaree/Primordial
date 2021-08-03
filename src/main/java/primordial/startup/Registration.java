@@ -15,7 +15,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import static primordial.Primordial.MODID;
 import primordial.blocks.*;
+import primordial.items.CrudeAxe;
+import primordial.items.CrudeHoe;
 import primordial.items.CrudePickaxe;
+import primordial.items.CrudeShovel;
 
 public class Registration
 {
@@ -31,6 +34,7 @@ public class Registration
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
+    //BLock Registration
     //BLOCK: Clay Oven globals
     public static final RegistryObject<ClayOven> BLOCK_OVEN = BLOCKS.register("clay_oven", ClayOven::new);
     public static final RegistryObject<Item> BLOCK_OVEN_ITEM = ITEMS.register("clay_oven", () -> new BlockItem(BLOCK_OVEN.get(), new Item.Properties().tab(Setup.ITEM_GROUP)));
@@ -42,7 +46,10 @@ public class Registration
                     return new ClayOvenContainer(windowId, world, pos, inv, inv.player);
     }));
 
+    //Item Registration:
+    // - Crude Tools
     public static final RegistryObject<CrudePickaxe> CRUDE_PICKAXE = ITEMS.register("crude_pickaxe", CrudePickaxe::new);
-
-
+    public static final RegistryObject<CrudeAxe> CRUDE_AXE = ITEMS.register("crude_axe", CrudeAxe::new);
+    public static final RegistryObject<CrudeShovel> CRUDE_SHOVEL = ITEMS.register("crude_shovel", CrudeShovel::new);
+    public static final RegistryObject<CrudeHoe> CRUDE_HOE = ITEMS.register("crude_hoe", CrudeHoe::new);
 }

@@ -10,8 +10,8 @@ import net.minecraftforge.fml.common.Mod;
 
 
 @Mod.EventBusSubscriber(modid = Primordial.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class Setup {
-
+public class Setup
+{
     public static final ItemGroup ITEM_GROUP = new ItemGroup(Primordial.MODID) {
         @Override
         public ItemStack makeIcon() {
