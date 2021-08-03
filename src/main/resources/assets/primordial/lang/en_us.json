@@ -1,5 +1,19 @@
 {
+	"itemGroup.primordial": "Primordial",
+
 	"item.primordial.crude_pickaxe": "Crude Pickaxe",
-	"message.crude_pickaxe": "A crudely constructed pickaxe of flint.",
-	"message.clay_oven": "A Clay oven serves as primitive alternative to a furnace."
+	"item.primordial.crude_axe": "Crude Axe",
+	"item.primordial.crude_shovel": "Crude Shovel",
+	"item.primordial.crude_hoe": "Crude Hoe",
+	"item.primordial.clay_oven": "Clay Oven",
+
+	"block.primordial.clay_oven": "Clay Oven",
+
+	"message.crude_pickaxe": "A crudely constructed pickaxe of flint",
+	"message.crude_axe": "A crudely constructed axe of flint",
+	"message.crude_shovel": "A crudely constructed shovel of flint",
+	"message.crude_hoe": "A crudely constructed hoe of flint",
+	"message.clay_oven": "A Clay oven serves as primitive alternative to a furnace",
+
+	"screen.primordial.clay_oven": "Clay Oven Screen"
 }

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "primordial",
+	"pattern": [
+		"xxx",
+		"x x",
+		"xxx" ],
+	"key": {
+		"x": {
+			"item": "minecraft:brick"
+		}
+	},
+	"result": {
+		"item": "primordial:clay_oven"
+	}
+}
+		
