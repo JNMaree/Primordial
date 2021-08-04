@@ -31,7 +31,6 @@ public class CrudeTierItem extends Item implements IItemTier
         return toolUses;
     }
 
-
     @Override
     public float getSpeed() {
         return 1F;
