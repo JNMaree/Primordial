@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '0.1'
-group = 'primordial.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'primordial.group' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'primordial'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
@@ -157,7 +157,7 @@ dependencies {
     runtimeOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-1.16.5:7.1.0.359")
 
     //The One Probe dependency
-    //compile fg.deobf(project.dependencies.create("mcjty.theoneprobe:TheOneProbe-${top_version}") {transitive = false})
+    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.+")
 
     // Real examples
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
