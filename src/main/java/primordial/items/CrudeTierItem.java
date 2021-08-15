@@ -32,6 +32,11 @@ public class CrudeTierItem extends Item implements IItemTier
     }
 
     @Override
+    public boolean isDamageable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
     public float getSpeed() {
         return 1F;
     }

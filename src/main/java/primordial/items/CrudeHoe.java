@@ -20,8 +20,6 @@ public class CrudeHoe extends CrudeTierItem
     public void appendHoverText(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag) {
         list.add(new TranslationTextComponent("message.crude_hoe"));
     }
-
-
-
+    
 
 }

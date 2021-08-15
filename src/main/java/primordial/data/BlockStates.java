@@ -51,7 +51,7 @@ public class BlockStates extends BlockStateProvider
             Direction face = state.getValue(BlockStateProperties.FACING);
             return ConfiguredModel.builder()
                     .modelFile(mFunc.apply(state))
-                    .rotationX(face.getAxis() == Direction.Axis.Y ? face.getAxisDirection().getStep() *-90 : 0)
+                    //.rotationX(face.getAxis() == Direction.Axis.Y ? face.getAxisDirection().getStep() *-90 : 0)
                     .rotationY(face.getAxis() != Direction.Axis.Y ? ((face.get2DDataValue() + 2)%4) *90 : 0)
                     .build();
         });
