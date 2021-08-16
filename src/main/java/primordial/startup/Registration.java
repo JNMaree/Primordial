@@ -15,10 +15,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import static primordial.Primordial.MODID;
 import primordial.blocks.*;
-import primordial.items.CrudeAxe;
-import primordial.items.CrudeHoe;
-import primordial.items.CrudePickaxe;
-import primordial.items.CrudeShovel;
+import primordial.items.tools.CrudeAxe;
+import primordial.items.tools.CrudeHoe;
+import primordial.items.tools.CrudePickaxe;
+import primordial.items.tools.CrudeShovel;
 
 public class Registration
 {

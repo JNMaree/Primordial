@@ -1,4 +1,4 @@
-package primordial.items;
+package primordial.items.tools;
 
 
 import net.minecraft.client.util.ITooltipFlag;
